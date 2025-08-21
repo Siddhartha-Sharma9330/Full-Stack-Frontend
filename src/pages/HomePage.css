@@ -1,0 +1,316 @@
+/* HomePage Styles */
+.homepage-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative; /* allow absolute children */
+  overflow: hidden; /* hide video overflow */
+}
+
+/* Background Video Styles */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  z-index: -1; /* behind all content */
+}
+
+/* TextType Component Styles */
+.text-type-container {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+  margin: 3rem 0 0 0 ;
+  margin-top: 10rem;
+  min-height: 6rem;
+  color: #ffffff;
+  background: transparent; 
+  background-clip: initial;
+  padding: 100px 20px; 
+  border-radius: 0;
+  left: 2rem;
+  bottom: 20rem;
+}
+.text-type-cursor {
+  animation: blink 1.5s infinite;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: none;
+  -webkit-text-fill-color: #ffffff;
+}
+.paragraph-text {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 1rem;
+  text-align: left;
+  margin: 1rem 10px;
+  padding-right: 40rem;
+}
+.Get-Started {
+  margin-top: 1rem;
+  
+  padding: 2rem 10rem;
+  margin-left: 4rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: green; /* Primary button color */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+.principles-section1 {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 3rem;
+  background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+  border-radius: 15px;
+}
+
+.principles-header1 {
+  margin-bottom: 2rem;
+}
+
+.principles-title1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.principles-description1 {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.principles-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.principle-card1 {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px); /* glassmorphism effect */
+}
+
+.principle-card1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.principle-icon1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.principle-title1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.principle-text1 {
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .principles-title1 {
+    font-size: 2rem;
+  }
+  .principles-description1 {
+    font-size: 1rem;
+  }
+}
+
+
+/* Override TextType component colors */
+.text-type-container .text-type__content {
+  color: #ffffff !important;
+}
+
+.text-type-container .text-type__cursor {
+  color: #000000 !important;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-type-container {
+    font-size: 2.5rem;
+    min-height: 4rem;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-type-container {
+    font-size: 2rem;
+    min-height: 3rem;
+    left: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0;
+  }
+}
+
+/* What Drives Us Forward Section */
+.principles-section1 {
+  background: #ffffff;
+  padding: 4rem 0;
+  margin-top: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principles-header1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  padding: 0 2rem;
+}
+
+.principles-title1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.principles-description1 {
+  font-size: 1.1rem;
+  color: #666666;
+}
+
+.principles-grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.principle-card1 {
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+}
+
+.principle-icon1 {
+  width: 60px;
+  height: 60px;
+  background: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.5rem;
+}
+
+.principle-title1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.principle-text1 {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Statistics Section */
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+  background: #ffffff;
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  gap: 5rem;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  padding: 0 30px;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #8b7cf6;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 400;
+  margin: 0;
+}
+/* Responsive Design for Principles Section */
+@media (max-width: 768px) {
+  .principles-section1 {
+    padding: 3rem 1rem;
+  }
+  
+  .principles-title1 {
+    font-size: 2rem;
+  }
+  
+  .principles-grid1 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .stats-section {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .principles-title1 {
+    font-size: 1.8rem;
+  }
+  
+  .principle-card1 {
+    padding: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .stats-section {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
